@@ -19,7 +19,7 @@ import { useAuthStore } from '#/store';
 
 import { refreshTokenApi } from './core';
 
-const { apiURL } = useAppConfig(import.meta.env, import.meta.env.PROD);
+const { apiURL, qmzcURL } = useAppConfig(import.meta.env, import.meta.env.PROD);
 
 function createRequestClient(baseURL: string, options?: RequestClientOptions) {
   const client = new RequestClient({
@@ -76,7 +76,7 @@ function createRequestClient(baseURL: string, options?: RequestClientOptions) {
     defaultResponseInterceptor({
       codeField: 'code',
       dataField: 'data',
-      successCode: 0,
+      successCode: 200,
     }),
   );
 
@@ -111,3 +111,9 @@ export const requestClient = createRequestClient(apiURL, {
 });
 
 export const baseRequestClient = new RequestClient({ baseURL: apiURL });
+
+export const qmzcRequestClient = createRequestClient(qmzcURL, {
+  responseReturn: 'data',
+});
+
+export const baseQmzcRequestClient = new RequestClient({ baseURL: qmzcURL });
