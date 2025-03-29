@@ -20,6 +20,12 @@ export default defineConfig(async () => {
             target: 'http://localhost:5320/api',
             ws: true,
           },
+          '/dev-api': {
+            changeOrigin: true, // 允许跨域
+            rewrite: (path) => path.replace(/^\/dev-api/, ''), // 路径重写（可选）
+            target: 'http://192.168.1.91:8080', // 后端接口地址
+            ws: true,
+          },
         },
       },
     },

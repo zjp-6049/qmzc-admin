@@ -1,4 +1,9 @@
 {
+  "base": {
+    "qmTitle": "qmzc",
+    "admin": "admin",
+    "qmAdmin": "QMZC ADMIN"
+  },
   "auth": {
     "login": "Login",
     "register": "Register",

@@ -1,0 +1,98 @@
+{
+  "name": "qmzc admin 项目规则",
+  "description": "qmzc admin 项目开发规范和技术栈指南",
+  "rules": [
+    {
+      "name": "技术栈规范",
+      "description": "项目使用的技术栈和版本要求",
+      "rules": [
+        {
+          "name": "核心依赖",
+          "content": "项目使用 Vue 3.5+、Element Plus、Vite、Pinia 和 Vue Router。建议的代码和解决方案必须适配这些技术栈。"
+        },
+        {
+          "name": "类型支持",
+          "content": "项目使用 TypeScript，类型声明文件统一存放在 `/types` 目录。自动生成的类型声明包括 `types/auto-imports.d.ts` 和 `types/components.d.ts`。"
+        }
+      ]
+    },
+    {
+      "name": "开发规范",
+      "description": "项目开发相关的规范和约定",
+      "rules": [
+        {
+          "name": "自动导入规则",
+          "content": "Vue 相关 API 无需手动导入；Element Plus 组件和函数无需手动导入；自动导入配置位于 `build/plugins.ts`。建议的代码应该遵循自动导入规则，不要手动导入已配置的模块。"
+        }
+      ]
+    },
+    {
+      "name": "代码风格规范",
+      "description": "代码编写的风格和命名规范",
+      "rules": [
+        {
+          "name": "格式化规则",
+          "content": "使用 ESLint、Prettier 和 StyleLint 进行代码检查和格式化。建议的代码应符合这些工具的规范。"
+        },
+        {
+          "name": "命名规范",
+          "content": "组件名使用 PascalCase；组件文件使用 PascalCase；工具文件使用 camelCase；变量命名使用 camelCase；常量命名使用 UPPER_CASE；CSS 类名使用 kebab-case。"
+        },
+        {
+          "name": "目录结构规范",
+          "content": "遵循项目的目录结构：`src/views`(页面组件)、`src/store`(状态管理)、`src/router`(路由配置)、`src/api`(API接口)、`src/assets`(静态资源)。"
+        }
+      ]
+    },
+    {
+      "name": "性能优化规范",
+      "description": "性能优化相关的建议和规范",
+      "rules": [
+        {
+          "name": "代码分割",
+          "content": "使用路由懒加载、组件按需导入、第三方库按需导入。建议的代码应考虑性能优化。"
+        },
+        {
+          "name": "缓存策略",
+          "content": "合理使用 keep-alive、路由缓存配置和数据本地存储。"
+        }
+      ]
+    },
+    {
+      "name": "安全规范",
+      "description": "代码安全相关的规范",
+      "rules": [
+        {
+          "name": "敏感信息",
+          "content": "API密钥等敏感信息不得硬编码；使用环境变量管理敏感配置；生产环境禁用调试工具和console。"
+        },
+        {
+          "name": "权限控制",
+          "content": "实现路由权限控制、按钮级别权限控制和API接口权限控制。"
+        }
+      ]
+    },
+    {
+      "name": "回答格式规范",
+      "description": "提供建议和回答的格式规范",
+      "rules": [
+        {
+          "name": "语言要求",
+          "content": "所有回答必须使用中文，除非特殊要求。"
+        },
+        {
+          "name": "代码示例",
+          "content": "提供的代码示例应该包含完整的类型声明，并考虑项目的自动导入规则。"
+        },
+        {
+          "name": "解决方案优先级",
+          "content": "提供解决方案时，应优先考虑：1.性能优化；2.类型安全；3.代码可维护性；4.与现有系统的兼容性。"
+        },
+        {
+          "name": "简洁回答",
+          "content": "回答应该简洁明了，直接解决问题，避免冗长的解释，除非用户特别要求详细说明。"
+        }
+      ]
+    }
+  ]
+}

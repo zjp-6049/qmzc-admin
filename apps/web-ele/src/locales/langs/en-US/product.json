@@ -1,0 +1,17 @@
+{
+  "config": {
+    "title": "Product Configuration",
+    "categoryManage": "Category Management",
+    "attributeCategory": "Attribute Category",
+    "attribute": "Attribute Library",
+    "unitLib": "Unit Library",
+    "materialCenter": "Material Center",
+    "tagLib": "Tag Library"
+  },
+  "manage": {
+    "title": "Product Management",
+    "productSetting": "Product Setting",
+    "productInfo": "Product Information",
+    "soldProducts": "Sold Products"
+  }
+}

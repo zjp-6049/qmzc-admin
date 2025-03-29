@@ -1,0 +1,17 @@
+{
+  "config": {
+    "title": "商品配置",
+    "categoryManage": "类目管理",
+    "attributeCategory": "属性类目",
+    "attribute": "属性库",
+    "unitLib": "单位库",
+    "materialCenter": "素材中心",
+    "tagLib": "标签库"
+  },
+  "manage": {
+    "title": "商品管理",
+    "productSetting": "商品设定",
+    "productInfo": "商品资料",
+    "soldProducts": "已售商品"
+  }
+}

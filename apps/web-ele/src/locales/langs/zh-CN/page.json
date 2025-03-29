@@ -1,4 +1,9 @@
 {
+  "base": {
+    "qmTitle": "器脉智藏",
+    "admin": "管理系统",
+    "qmAdmin": "器脉智藏管理系统"
+  },
   "auth": {
     "login": "登录",
     "register": "注册",
