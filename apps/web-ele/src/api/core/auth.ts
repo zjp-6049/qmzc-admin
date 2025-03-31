@@ -13,7 +13,7 @@ export namespace AuthApi {
 
   /** 登录接口返回值 */
   export interface LoginResult {
-    access_token: string;
+    accessToken: string;
   }
 
   export interface RefreshTokenResult {
@@ -26,7 +26,17 @@ export namespace AuthApi {
  * 登录
  */
 export async function loginApi(data: AuthApi.LoginParams) {
-  return qmzcRequestClient.post<AuthApi.LoginResult>('/auth/login', data);
+  return qmzcRequestClient
+    .post<AuthApi.LoginResult>('/auth/login', data)
+    .then(() =>
+      requestClient.post<AuthApi.LoginResult>('/auth/login', {
+        id: 0,
+        password: '123456',
+        realName: 'Vben',
+        roles: ['super'],
+        username: 'vben',
+      }),
+    );
 }
 
 /**
