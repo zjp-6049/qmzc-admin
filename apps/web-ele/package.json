@@ -48,6 +48,8 @@
     "vue-router": "catalog:"
   },
   "devDependencies": {
-    "unplugin-element-plus": "catalog:"
+    "unplugin-auto-import": "^19.1.2",
+    "unplugin-element-plus": "catalog:",
+    "unplugin-vue-components": "^28.4.1"
   }
 }

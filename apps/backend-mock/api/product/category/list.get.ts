@@ -1,0 +1,177 @@
+/**
+ * 商品类目Mock数据
+ */
+export const MOCK_CATEGORY_DATA = [
+  {
+    id: 1,
+    name: '电子产品',
+    status: '启用',
+    operator: '陈思远',
+    createTime: '2023-12-01 08:30:00',
+    updateTime: '2023-12-01 08:30:00',
+    children: [
+      {
+        id: 11,
+        parentId: 1,
+        name: '手机',
+        status: '启用',
+        operator: '陈思远',
+        createTime: '2023-12-01 08:30:00',
+        updateTime: '2023-12-01 08:30:00',
+        children: [
+          {
+            id: 111,
+            parentId: 11,
+            name: '智能手机',
+            status: '启用',
+            operator: '陈思远',
+            createTime: '2023-12-01 08:30:00',
+            updateTime: '2023-12-01 08:30:00',
+          },
+          {
+            id: 112,
+            parentId: 11,
+            name: '功能手机',
+            status: '禁用',
+            operator: '陈思远',
+            createTime: '2023-12-01 08:30:00',
+            updateTime: '2023-12-01 08:30:00',
+          },
+        ],
+      },
+      {
+        id: 12,
+        parentId: 1,
+        name: '电脑',
+        status: '启用',
+        operator: '林雨晴',
+        createTime: '2023-12-01 08:30:00',
+        updateTime: '2023-12-01 08:30:00',
+        children: [
+          {
+            id: 121,
+            parentId: 12,
+            name: '笔记本电脑',
+            status: '启用',
+            operator: '林雨晴',
+            createTime: '2023-12-01 08:30:00',
+            updateTime: '2023-12-01 08:30:00',
+          },
+          {
+            id: 122,
+            parentId: 12,
+            name: '台式电脑',
+            status: '启用',
+            operator: '林雨晴',
+            createTime: '2023-12-01 08:30:00',
+            updateTime: '2023-12-01 08:30:00',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: '家用电器',
+    status: '启用',
+    operator: '张云帆',
+    createTime: '2023-12-01 08:30:00',
+    updateTime: '2023-12-01 08:30:00',
+    children: [
+      {
+        id: 21,
+        parentId: 2,
+        name: '厨房电器',
+        status: '启用',
+        operator: '张云帆',
+        createTime: '2023-12-01 08:30:00',
+        updateTime: '2023-12-01 08:30:00',
+        children: [
+          {
+            id: 211,
+            parentId: 21,
+            name: '电饭煲',
+            status: '启用',
+            operator: '张云帆',
+            createTime: '2023-12-01 08:30:00',
+            updateTime: '2023-12-01 08:30:00',
+          },
+          {
+            id: 212,
+            parentId: 21,
+            name: '微波炉',
+            status: '启用',
+            operator: '张云帆',
+            createTime: '2023-12-01 08:30:00',
+            updateTime: '2023-12-01 08:30:00',
+          },
+        ],
+      },
+      {
+        id: 22,
+        parentId: 2,
+        name: '生活电器',
+        status: '启用',
+        operator: '张云帆',
+        createTime: '2023-12-01 08:30:00',
+        updateTime: '2023-12-01 08:30:00',
+        children: [
+          {
+            id: 221,
+            parentId: 22,
+            name: '吸尘器',
+            status: '启用',
+            operator: '张云帆',
+            createTime: '2023-12-01 08:30:00',
+            updateTime: '2023-12-01 08:30:00',
+          },
+          {
+            id: 222,
+            parentId: 22,
+            name: '电风扇',
+            status: '禁用',
+            operator: '张云帆',
+            createTime: '2023-12-01 08:30:00',
+            updateTime: '2023-12-01 08:30:00',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: '服装服饰',
+    status: '禁用',
+    operator: '赵子琪',
+    createTime: '2023-12-01 08:30:00',
+    updateTime: '2023-12-01 08:30:00',
+    children: [
+      {
+        id: 31,
+        parentId: 3,
+        name: '男装',
+        status: '禁用',
+        operator: '赵子琪',
+        createTime: '2023-12-01 08:30:00',
+        updateTime: '2023-12-01 08:30:00',
+      },
+      {
+        id: 32,
+        parentId: 3,
+        name: '女装',
+        status: '禁用',
+        operator: '赵子琪',
+        createTime: '2023-12-01 08:30:00',
+        updateTime: '2023-12-01 08:30:00',
+      },
+    ],
+  },
+];
+
+export default defineEventHandler(() => {
+  return {
+    code: 200,
+    data: MOCK_CATEGORY_DATA,
+    message: 'ok',
+  };
+});
