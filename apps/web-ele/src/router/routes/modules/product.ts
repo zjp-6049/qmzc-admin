@@ -79,30 +79,52 @@ const routes: RouteRecordRaw[] = [
     path: '/product-manage',
     children: [
       {
-        name: 'ProductSetting',
-        path: '/product-manage/setting',
-        component: () => import('#/views/product/manage/setting/index.vue'),
+        name: 'ProductCategoryAttribute',
+        path: '/product-manage/category-attribute',
+        component: () =>
+          import('#/views/product/manage/category-attribute/index.vue'),
         meta: {
           icon: 'lucide:settings',
-          title: $t('product.manage.productSetting'),
+          title: '类目属性',
+        },
+      },
+      {
+        name: 'ProductCategoryAttributeAdd',
+        path: '/product-manage/category-attribute/add',
+        component: () =>
+          import('#/views/product/manage/category-attribute/add.vue'),
+        meta: {
+          hideInMenu: true,
+          icon: 'lucide:settings',
+          title: '添加类目属性',
+        },
+      },
+      {
+        name: 'ProductAuthentication',
+        path: '/product-manage/authentication',
+        component: () =>
+          import('#/views/product/manage/authentication/index.vue'),
+        meta: {
+          icon: 'lucide:search',
+          title: '商品鉴定',
         },
       },
       {
         name: 'ProductInfo',
         path: '/product-manage/info',
-        component: () => import('#/views/product/manage/info/index.vue'),
+        component: () => import('#/views/product/manage/libs/info/index.vue'),
         meta: {
           icon: 'lucide:file-text',
-          title: $t('product.manage.productInfo'),
+          title: '商品资料',
         },
       },
       {
-        name: 'SoldProducts',
-        path: '/product-manage/sold',
-        component: () => import('#/views/product/manage/sold/index.vue'),
+        name: 'ProductCirculation',
+        path: '/product-manage/circulation',
+        component: () => import('#/views/product/manage/circulation/index.vue'),
         meta: {
           icon: 'lucide:shopping-cart',
-          title: $t('product.manage.soldProducts'),
+          title: '流通商品',
         },
       },
     ],
